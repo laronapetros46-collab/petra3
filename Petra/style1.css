@@ -1,0 +1,826 @@
+/* ==========================================
+   GOOGLE FONT FALLBACKS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+
+    background:
+        linear-gradient(
+            rgba(17, 17, 17, .65),
+            rgba(17, 17, 17, .75)
+        ),
+        url("images/library.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #F5F3EE;
+
+    font-family:
+        'Inter',
+        Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header {
+
+    text-align: center;
+
+    padding: 70px 20px 30px;
+
+}
+
+header h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 5rem;
+
+    letter-spacing: 2px;
+
+    color: #F6F0E8;
+
+    margin-bottom: 15px;
+
+}
+
+.subtitle {
+
+    color: #D8D2CB;
+
+    font-size: 1.2rem;
+
+    font-style: italic;
+
+}
+
+
+/* ==========================================
+   INTRO
+========================================== */
+
+.intro {
+
+    width: min(900px, 90%);
+
+    margin: 30px auto;
+
+    text-align: center;
+
+    line-height: 1.8;
+
+    color: #DDD;
+
+}
+
+
+/* ==========================================
+   DEVELOPER
+========================================== */
+
+.developer {
+
+    text-align: center;
+
+    margin: 50px auto;
+
+    width: min(800px, 90%);
+
+}
+
+.developer h2 {
+
+    margin-bottom: 15px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2rem;
+
+}
+
+.developer p {
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.dev-button {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #6D5D4B;
+
+    transition: .35s;
+
+    font-weight: 600;
+
+}
+
+.dev-button:hover {
+
+    background: #8C7459;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==========================================
+   LIBRARY
+========================================== */
+
+.library {
+
+    width: min(1300px, 95%);
+
+    margin: 80px auto;
+
+}
+
+.library h3 {
+
+    text-align: center;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 40px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+
+/* ==========================================
+   CARD GRID
+========================================== */
+
+.cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.poem-card {
+
+    position: relative;
+
+    display: block;
+
+    width: 260px;
+
+    min-height: 250px;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, .2);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    transition: .35s ease;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, .25),
+        inset 0 1px 1px rgba(255, 255, 255, .3);
+
+    /*
+       IMPORTANT:
+       Cards are now <a> elements,
+       so remove normal link styling.
+    */
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* ==========================================
+   GLASS SHIMMER
+========================================== */
+
+.poem-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -150%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, .35),
+            transparent
+        );
+
+    transition: .8s;
+
+    pointer-events: none;
+
+}
+
+.poem-card:hover::after {
+
+    left: 160%;
+
+}
+
+
+/* ==========================================
+   COLOURED TOP BAR
+========================================== */
+
+.poem-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 6px;
+
+}
+
+
+/* ==========================================
+   WATERMARK
+========================================== */
+
+.watermark {
+
+    position: absolute;
+
+    right: -5px;
+
+    bottom: -20px;
+
+    font-size: 8rem;
+
+    opacity: .08;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    transition: .4s;
+
+    font-family: serif;
+
+}
+
+.poem-card:hover .watermark {
+
+    transform:
+        scale(1.08)
+        rotate(-8deg);
+
+    opacity: .18;
+
+}
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.poem-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+/* ==========================================
+   TITLES
+========================================== */
+
+.poem-card h4 {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-size: 1.5rem;
+
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+.poem-card h4::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: currentColor;
+
+    transition: .3s;
+
+}
+
+.poem-card:hover h4::after {
+
+    width: 100%;
+
+}
+
+.poem-card p {
+
+    color: #555;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================
+   ANTHOLOGY THEMES
+========================================== */
+
+
+/* ==========================================
+   01 — SEASONS OF THE SOUL
+========================================== */
+
+.seasons {
+
+    background: rgba(245, 242, 230, .85);
+
+}
+
+.seasons::before {
+
+    background: #D4A373;
+
+}
+
+.seasons h4 {
+
+    color: #5A8F3D;
+
+}
+
+.seasons .watermark {
+
+    color: #6A994E;
+
+}
+
+.seasons:hover {
+
+    box-shadow:
+        0 0 30px rgba(212, 163, 115, .45);
+
+}
+
+
+/* ==========================================
+   02 — CELESTIAL ECHOES
+========================================== */
+
+.celestial {
+
+    background: rgba(236, 231, 255, .85);
+
+}
+
+.celestial::before {
+
+    background: #6D28D9;
+
+}
+
+.celestial h4 {
+
+    background:
+        linear-gradient(
+            90deg,
+            #7C3AED,
+            #60A5FA
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+.celestial .watermark {
+
+    color: #7C3AED;
+
+}
+
+.celestial:hover {
+
+    box-shadow:
+        0 0 30px rgba(124, 58, 237, .35);
+
+}
+
+
+/* ==========================================
+   03 — BENEATH THE SURFACE
+========================================== */
+
+.ocean {
+
+    background: rgba(227, 245, 248, .85);
+
+}
+
+.ocean::before {
+
+    background: #00B4D8;
+
+}
+
+.ocean h4 {
+
+    background:
+        linear-gradient(
+            90deg,
+            #0077B6,
+            #00B4D8
+        );
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+.ocean .watermark {
+
+    color: #00A6FB;
+
+}
+
+.ocean:hover {
+
+    box-shadow:
+        0 0 30px rgba(0, 180, 216, .35);
+
+}
+
+
+/* ==========================================
+   04 — STORIES BENEATH THE CANOPY
+========================================== */
+
+.forest {
+
+    background: rgba(232, 243, 228, .85);
+
+}
+
+.forest::before {
+
+    background: #3F9142;
+
+}
+
+.forest h4 {
+
+    background:
+        linear-gradient(
+            90deg,
+            #2D6A4F,
+            #95D5B2
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+
+}
+
+.forest .watermark {
+
+    color: #2D6A4F;
+
+}
+
+.forest:hover {
+
+    box-shadow:
+        0 0 30px rgba(63, 145, 66, .35);
+
+}
+
+
+/* ==========================================
+   05 — LUNARA AND STELLA
+========================================== */
+
+.luna {
+
+    background: rgba(251, 236, 244, .88);
+
+}
+
+.luna::before {
+
+    background: #EC4899;
+
+}
+
+.luna h4 {
+
+    background:
+        linear-gradient(
+            90deg,
+            #EC4899,
+            #A855F7
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+.luna .watermark {
+
+    color: #C084FC;
+
+}
+
+.luna:hover {
+
+    box-shadow:
+        0 0 30px rgba(236, 72, 153, .35);
+
+}
+
+
+/* ==========================================
+   06 — COMING SOON
+========================================== */
+
+.upcoming {
+
+    background: rgba(236, 236, 236, .82);
+
+    cursor: default;
+
+}
+
+.upcoming::before {
+
+    background: #888;
+
+}
+
+.upcoming h4 {
+
+    color: #666;
+
+}
+
+.upcoming .watermark {
+
+    color: #777;
+
+}
+
+.upcoming:hover {
+
+    box-shadow:
+        0 0 25px rgba(150, 150, 150, .35);
+
+}
+
+
+/*
+   Don't make the Coming Soon card
+   move like the active cards.
+*/
+
+.upcoming:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+/* ==========================================
+   MUSIC SECTION
+========================================== */
+
+.music-section {
+
+    max-width: 700px;
+
+    margin: 60px auto;
+
+    padding: 30px;
+
+    text-align: center;
+
+}
+
+.music-section h3 {
+
+    margin-bottom: 8px;
+
+    font-size: 1.4rem;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+}
+
+.music-section p {
+
+    opacity: .7;
+
+    margin-bottom: 25px;
+
+}
+
+.spotify-player {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, .3);
+
+}
+
+.spotify-player iframe {
+
+    display: block;
+
+    width: 100%;
+
+    border: none;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #AAA;
+
+    font-size: .95rem;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    header h1 {
+
+        font-size: 3.5rem;
+
+    }
+
+    .library h3 {
+
+        font-size: 2rem;
+
+    }
+
+    .poem-card {
+
+        width: 100%;
+
+        max-width: 350px;
+
+    }
+
+}
+
+
+/* ==========================================
+   BACKGROUND ANIMATION
+========================================== */
+
+@keyframes backgroundMove {
+
+    from {
+
+        transform: scale(1);
+
+    }
+
+    to {
+
+        transform: scale(1.08);
+
+    }
+
+}
