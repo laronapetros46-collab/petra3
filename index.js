@@ -1,1 +1,1 @@
-window.prompt(`Welcome`)
+alert(`Welcome`)
