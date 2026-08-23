@@ -20,7 +20,7 @@ body {
             rgba(17, 17, 17, .65),
             rgba(17, 17, 17, .75)
         ),
-        url("images/library.jpg");
+        url("library.jpg");
 
     background-size: cover;
     background-position: center;
